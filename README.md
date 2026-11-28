@@ -1,33 +1,87 @@
-# DeveloperPortfolio
+# Question 2: Shell Scripting & Automation
 
+**Name:** Sanskriti  
+**Roll Number:** 2601730034  
+**Course:** DeveloperPortfolio Assignment  
+**Operating System:** Ubuntu (WSL 2)
 
-## Question 1: Linux Commands & System Documentation
+## Overview
 
-### 1. System Profile
-The system hardware specifications and operating system details are documented using Linux commands.
+This section contains two Bash shell scripts developed to automate practical developer tasks using Linux commands and shell scripting.
 
-File: [system_profile.md](Linux/system_profile.md)
+## 2A. sysinfo.sh – System Information Report
 
-### 2. Binary Number Representation
-Manual conversion of decimal 75 to binary and binary 110101 to decimal is documented in the system profile.
+**File:** `sysinfo.sh`
 
-### 3. Linux Command Outputs
-The following Linux commands were executed and their outputs were saved:
+This script generates a formatted system information report.
 
-- `ls -la ~`
-- `ps aux | head -10`
-- `df -h`
-- `free -h`
+### Features
+- Displays student name, roll number and current date.
+- Retrieves CPU model and number of cores.
+- Displays total and used memory.
+- Lists the top 3 processes by CPU usage.
+- Displays a successful report generation message.
 
-File: [commands_output.txt](Linux/commands_output.txt)
+### Execution
 
-### 4. Screenshots
+```bash
+chmod +x sysinfo.sh
+./sysinfo.sh
+```
 
-#### Hardware Information
-![Hardware Information](Screenshots/hardware_info.png)
+Output is saved in `sysinfo_output.txt`.
 
-#### Binary Conversion
-![Binary Conversion](Screenshots/binary_conversion.png)
+## 2B. backup.sh – Folder Backup
 
-#### Linux Command Outputs
-![Command Outputs](Screenshots/commands_output.png)
+**File:** `backup.sh`
+
+This script creates compressed backups of a specified directory.
+
+### Features
+- Checks whether a source folder is provided.
+- Verifies that the folder exists.
+- Creates a compressed `.tar.gz` archive.
+- Uses a timestamp in the backup filename.
+- Displays the backup filename and file size.
+- Maintains a backup log in `~/DeveloperPortfolio_Backups/backup.log`.
+
+### Execution
+
+```bash
+chmod +x backup.sh
+./backup.sh ~/DeveloperPortfolio
+```
+
+## Folder Structure
+
+```text
+ShellScripts/
+│
+├── sysinfo.sh
+├── sysinfo_output.txt
+├── backup.sh
+└── README.md
+
+Screenshots/
+└── backup_demo.png
+```
+
+## Tools Used
+
+- Ubuntu Linux (WSL 2)
+- Bash Shell
+- lscpu
+- free
+- awk
+- ps
+- sort
+- head
+- tar
+- Git and GitHub
+
+## Conclusion
+
+Both shell scripts demonstrate practical knowledge of Bash scripting, Linux system commands, automation, file handling and backup management.
+
+**Submitted by: Sanskriti**  
+**Roll Number: 2601730034**	
